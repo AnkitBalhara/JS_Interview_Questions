@@ -17,16 +17,22 @@
 // }
 
 // Best method to return any true or false in the situations when we have to return something either true or false...
-const isPowerTwo = (num) => {
-  let answer = false;
-  for (let i = 0; i <= 10; i++) {
-    if (num == Math.pow(2, i)) {
-      answer = true;
-    }
-  }
-  return console.log(answer);
-};
+// const isPowerTwo = (num) => {
+//   let answer = false;
+//   for (let i = 0; i <= 10; i++) {
+//     if (num == Math.pow(2, i)) {
+//       answer = true;
+//     }
+//   }
+//   return console.log(answer);
+// };
 
-isPowerTwo(3);
-isPowerTwo(8);
-isPowerTwo(1024);
+function isPowerOfTwo(num){
+    return num > 0 && (num & (num - 1))===0;
+}
+// const result1 = isPowerOfTwo(8);
+// console.log(result1);
+
+console.log(isPowerOfTwo(3))
+console.log(isPowerOfTwo(8))
+console.log(isPowerOfTwo(1024))
