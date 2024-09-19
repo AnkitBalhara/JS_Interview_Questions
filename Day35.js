@@ -7,16 +7,20 @@
 // console.log(isEmptyObject({name:null})) || Output :- Object is empty
 
 const isEmptyObject = (obj) => {
-  if (Object.values(obj).length === 0) {
-    return "Object is empty!!!";
-  } else {
-    for (const key in obj) {
-      if (obj[key] != undefined || obj[key] != null) {
-        return "Object is not empty";
-      }
-    }
-    return "Object is empty...";
-  }
+    // Method 1....
+    return Object.values(obj).length === 0 ?"Empty Object":"Not empty Object"
+
+    // Method 2....
+//   if (Object.values(obj).length === 0) {
+//     return "Object is empty!!!";
+//   } else {
+//     for (const key in obj) {
+//       if (obj[key] != undefined || obj[key] != null) {
+//         return "Object is not empty";
+//       }
+//     }
+//     return "Object is empty...";
+//   }
 };
 
 let object1 = {
@@ -25,7 +29,9 @@ let object1 = {
 };
 let object2 = {name:undefined,name1:null,a:"skmkm"};
 let object3 = {name:null};
+let object4 = {};
 
 console.log(isEmptyObject(object1));
 console.log(isEmptyObject(object2));
 console.log(isEmptyObject(object3));
+console.log(isEmptyObject(object4));
