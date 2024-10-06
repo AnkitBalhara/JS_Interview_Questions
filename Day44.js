@@ -33,8 +33,8 @@ const validateShortMethod = (password) => {
 // "^" It is used for satrting and "$" is used for ending..
 // (?=.*[A-Z])  =>
 // ?=.* OR ?=.+
-// ?=."*" Means :- anything is written before [A-Z] is not important
-// ?=."+" Means :- anything is written before [A-Z] is  important
+// ?=."*" Means :- anything is written before [A-Z] is not important (Not Required)
+// ?=."+" Means :- anything is written before [A-Z] is  important (Required)
 // ******* ************************
 
 console.log(validateShortMethod("Ankit0+"));
